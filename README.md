@@ -1,6 +1,6 @@
-Dev: João Pedro Lopes Canto
+# Dev: João Pedro Lopes Canto
 
-Scripts
+## Scripts
 
 ### `npm install/ yarn add`
 
