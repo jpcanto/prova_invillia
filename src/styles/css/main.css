@@ -1,7 +1,10 @@
 .form {
   align-items: center;
+  background: #fff;
   display: flex;
   flex-direction: column;
+  margin: 20px;
+  padding-bottom: 15px;
 }
 .form__select-box {
   display: flex;
@@ -33,12 +36,29 @@
   background-color: #7068e77a;
 }
 
+.preview {
+  color: #fff;
+  font-family: sans-serif;
+  background: #f4f0f047;
+  margin: 20px;
+  padding: 15px;
+}
+.preview__caixa__info {
+  padding-bottom: 15px;
+}
+
 html,
 body,
-#root {
+#root,
+.main-content {
   height: 100%;
   margin: 0;
   padding: 0;
+}
+
+.main-content {
+  background: #4d4d4d;
+  padding-top: 15px;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -1,12 +1,19 @@
 @import './_partials/variables';
 @import './_partials/mixins';
 @import '../../components/form/Form';
+@import '../../components/preview/preview';
 @import './_partials/media';
 
 html, 
 body, 
-#root {
+#root,
+.main-content {
     height: 100%;
     margin: 0;
     padding: 0;
+}
+
+.main-content {
+    background: #4d4d4d;
+    padding-top: 15px;
 }

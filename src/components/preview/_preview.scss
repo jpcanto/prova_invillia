@@ -1,0 +1,13 @@
+.preview {
+    color: #fff;
+    font-family: sans-serif;
+
+    background: #f4f0f047;
+    margin: 20px;
+    padding: 15px;
+    &__caixa {
+        &__info {
+            padding-bottom: 15px;
+        }
+    }
+}
