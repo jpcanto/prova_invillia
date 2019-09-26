@@ -1,0 +1,22 @@
+@mixin btn {
+    color: #615cb0;
+
+    background: #fff;
+    border: 1px solid;
+    cursor: pointer;
+    height: 50px;
+    width: 100px;
+    transition: background-color 1s ease-in-out;
+}
+
+@mixin select($largura, $tamanhoFonte) {
+    color: $cinzaPrincipal;
+    font-family: sans-serif;
+    font-size: $tamanhoFonte;
+    font-weight: bold;
+
+    border: 0;
+    border-bottom: 1px solid $cinzaOpaco;
+    outline: 0;
+    width: $largura;
+}

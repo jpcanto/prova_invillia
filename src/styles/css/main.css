@@ -20,6 +20,18 @@
   outline: 0;
   width: -webkit-fill-available;
 }
+.form__pesquisar {
+  color: #615cb0;
+  background: #fff;
+  border: 1px solid;
+  cursor: pointer;
+  height: 50px;
+  width: 100px;
+  transition: background-color 1s ease-in-out;
+}
+.form__pesquisar:hover {
+  background-color: #7068e77a;
+}
 
 html,
 body,
