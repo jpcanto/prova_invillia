@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import PreviewFilms from '../previewFilms/previewFilms';
+import PreviewShips from '../previewShips/previewShips';
 
 export default class preview extends Component {
     render() {
@@ -47,6 +49,8 @@ export default class preview extends Component {
                         </div>
                     </div>
                 </div >
+              <PreviewFilms state={this.props.state} />
+              <PreviewShips state={this.props.state} />
             </>
         );
     }

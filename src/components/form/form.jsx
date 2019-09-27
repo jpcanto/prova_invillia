@@ -14,7 +14,7 @@ export default class form extends Component {
     
     render() {
         return (
-            <aside>
+            <>
                 <div className="form">
                     <div className="form__select-box">
                         <select onChange={(e) => this.setState({ pessoa: e.target.value.split(',') })}>
@@ -29,7 +29,7 @@ export default class form extends Component {
                         Pesquisar
                     </button>
                 </div>
-            </aside>
+            </>
         );
     }
 }
