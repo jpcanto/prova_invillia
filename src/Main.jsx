@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Open from './components/open/open';
 import Form from './components/form/form';
 import Preview from './components/preview/preview';
+import PreviewFilms from './components/previewFilms/previewFilms';
 import * as StarWarsPessoa from './services/starWarsPessoa.js';
 import * as StarWarsFilme from './services/starWarsFilme.js';
 
@@ -49,6 +50,7 @@ export default class Main extends Component {
               <Open />
               <Form state={this.state} selecionarPessoa={this.setPerson} />
               <Preview state={this.state} />
+              <PreviewFilms state={this.state} />
             </>
         }
       </section>
