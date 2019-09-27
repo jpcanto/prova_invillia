@@ -20,8 +20,6 @@ export default class Main extends Component {
       pessoas: resultadoPessoa.results,
       filmes: resultadoFilme.results
     })
-    console.log(this.state.pessoas)
-    console.log(this.state.filmes)
   }
 
   setPerson = (pessoa) => {
