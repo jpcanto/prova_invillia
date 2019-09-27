@@ -68,7 +68,8 @@ export default class preview extends Component {
                                                 {
                                                     filme.url === personagem ?
                                                         <>
-                                                            <div>{`${filme.title}`}</div>
+                                                            <div><span>{filme.url.slice(27, 28)} - </span>
+                                                            {`${filme.title}`}</div>
                                                         </> : null
                                                 }
                                             </>
