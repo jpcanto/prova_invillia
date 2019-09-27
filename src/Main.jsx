@@ -40,9 +40,17 @@ export default class Main extends Component {
   render() {
     return (
       <section className="main-content">
-        <Open />
-        <Form state={this.state} selecionarPessoa={this.setPerson} />
-        <Preview state={this.state} />
+        {
+          this.state.pessoas.length <= 0 ?
+            <div className="loader-box">
+              <div className="loader"></div>
+            </div> :
+            <>
+              <Open />
+              <Form state={this.state} selecionarPessoa={this.setPerson} />
+              <Preview state={this.state} />
+            </>
+        }
       </section>
     );
   }

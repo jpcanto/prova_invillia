@@ -2,6 +2,14 @@
   font-family: starWars;
   src: url("../../utils/fonts/starjedi/Starjhol.ttf");
 }
+@keyframes loader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .open {
   color: #ffe300;
   font-family: starWars;
@@ -87,7 +95,7 @@ html,
 body,
 #root,
 .main-content {
-  height: fit-content;
+  min-height: 100%;
   margin: 0;
   padding: 0;
 }
@@ -95,6 +103,25 @@ body,
 .main-content {
   background: #1c1e22;
   padding: 15px 0;
+}
+
+.loader-box {
+  align-items: center;
+  background: #1c1e22;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.loader-box .loader {
+  border: 16px solid #fff;
+  border-top: 16px solid #039BE5;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: loader 2s linear infinite;
 }
 
 /*# sourceMappingURL=main.css.map */
