@@ -2,12 +2,18 @@
     color: #fff;
     font-family: sans-serif;
 
-    background: #f4f0f047;
+    background: $pretoClaro;
+    border: 1px solid rgba(0,0,0,.6);
+    border-radius: 5px;
     margin: 20px;
     padding: 15px;
     &__caixa {
         &__info {
             padding-bottom: 15px;
+            span {
+                color: $amareloPrincipal;
+                font-weight: bold;
+            }
         }
     }
 }

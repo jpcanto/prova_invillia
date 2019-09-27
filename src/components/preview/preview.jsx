@@ -5,9 +5,12 @@ export default class preview extends Component {
         return (
             <div className="preview">
                 <div className="preview__caixa">
-                    <div className="preview__caixa__info">{`Nome: ${this.props.state.starWars.name}`}</div>
-                    <div className="preview__caixa__info">{`Cor do cabelo: ${this.props.state.starWars.hair_color}`}</div>
-                    <div className="preview__caixa__info">{`Cor dos olhos: ${this.props.state.starWars.eye_color}`}</div>
+                    {
+                        this.props.state.module === 'people' ?
+                            <div className="preview__caixa__info">
+                                <span>Nome: </span>{`${this.props.state.starWars.name}`}</div>
+                            : null
+                    }
                 </div>
             </div>
         );

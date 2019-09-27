@@ -27,7 +27,7 @@ export default class Main extends Component {
     this.getStarWarsData();
   }
 
-  componentWillMount() {
+  componentDidMount() {
     this.getStarWarsData();
   }
 
