@@ -116,8 +116,8 @@ body,
   width: 100%;
 }
 .loader-box .loader {
-  border: 16px solid #fff;
-  border-top: 16px solid #039BE5;
+  border: 3px solid #fff;
+  border-top: 3px solid #039BE5;
   border-radius: 50%;
   width: 120px;
   height: 120px;
