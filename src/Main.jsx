@@ -10,7 +10,9 @@ export default class Main extends Component {
   state = {
     numeracao: 1,
     pessoas: [],
+    filmes: [],
     personagem: '',
+    personagemFilmes: [],
   };
 
   async getStarWarsData() {
@@ -18,16 +20,17 @@ export default class Main extends Component {
     let resultadoFilme = await StarWarsFilme.StarWarsApiFilme();
     this.setState({
       pessoas: resultadoPessoa.results,
-      filmes: resultadoFilme.results
+      filmes: resultadoFilme.results,
     })
   }
 
   setPerson = (pessoa) => {
     this.setState({
-      personagem: pessoa
+      personagem: pessoa[0],
+      personagemFilmes: pessoa.slice(1, pessoa.length)
     })
     this.getStarWarsData();
-    console.log(this.state.personagem)
+    console.log(this.state.personagemFilmes)
   }
 
   componentDidMount() {
