@@ -4,6 +4,7 @@ import Form from './components/form/form';
 import Preview from './components/preview/preview';
 import * as StarWarsPessoa from './services/starWarsPessoa.js';
 import * as StarWarsFilme from './services/starWarsFilme.js';
+import * as StarWarsNaves from './services/starWarsNaves.js';
 
 export default class Main extends Component {
 
@@ -11,6 +12,7 @@ export default class Main extends Component {
     numeracao: 1,
     pessoas: [],
     filmes: [],
+    naves: [],
     personagem: '',
     personagemFilmes: [],
   };
@@ -18,9 +20,11 @@ export default class Main extends Component {
   async getStarWarsData() {
     let resultadoPessoa = await StarWarsPessoa.StarWarsApiPessoa();
     let resultadoFilme = await StarWarsFilme.StarWarsApiFilme();
+    let resultadoNaves = await StarWarsNaves.StarWarsApiNaves();
     this.setState({
       pessoas: resultadoPessoa.results,
       filmes: resultadoFilme.results,
+      naves: resultadoNaves.results,
     })
   }
 
@@ -30,7 +34,7 @@ export default class Main extends Component {
       personagemFilmes: pessoa.slice(1, pessoa.length)
     })
     this.getStarWarsData();
-    console.log(this.state.personagemFilmes)
+    console.log(this.state.pessoas)
   }
 
   componentDidMount() {

@@ -13,7 +13,7 @@ export default class previewShips extends Component {
                                 </div>
                                 : null
                         }
-                        <div className="preview__caixa__info__details--films">
+                        {/* <div className="preview__caixa__info__details--films">
                             {this.props.state.filmes.map((filme) =>
                                 <>
                                     {this.props.state.personagemFilmes.map((personagem) =>
@@ -29,7 +29,7 @@ export default class previewShips extends Component {
                                     )}
                                 </>
                             )}
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>

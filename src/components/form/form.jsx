@@ -5,7 +5,6 @@ export default class form extends Component {
 
     state = {
         pessoa: '',
-        teste: ''
     }
 
     setPerson = (pessoa) => {
@@ -18,6 +17,7 @@ export default class form extends Component {
                 <div className="form">
                     <div className="form__select-box">
                         <select onChange={(e) => this.setState({ pessoa: e.target.value.split(',') })}>
+                            <option selected disable hidden>Select a character</option>
                             {this.props.state.pessoas.map((pessoa)  => 
                                     <option key={Math.random()} value={pessoa.name + ',' + pessoa.films}>{pessoa.name}</option>
                                 )}
