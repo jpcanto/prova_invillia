@@ -1,5 +1,7 @@
+@import './_partials/fonts';
 @import './_partials/variables';
 @import './_partials/mixins';
+@import '../../components/open/open';
 @import '../../components/form/Form';
 @import '../../components/preview/preview';
 @import './_partials/media';
@@ -8,12 +10,12 @@ html,
 body, 
 #root,
 .main-content {
-    height: 100%;
+    height: fit-content;
     margin: 0;
     padding: 0;
 }
 
 .main-content {
     background: $pretoEscuro;
-    padding-top: 15px;
+    padding: 15px 0;
 }

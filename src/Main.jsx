@@ -1,30 +1,35 @@
 import React, { Component } from 'react';
+import Open from './components/open/open';
 import Form from './components/form/form';
 import Preview from './components/preview/preview';
-import * as StarWars from './services/starWars.js';
+import * as StarWarsPessoa from './services/starWarsPessoa.js';
+import * as StarWarsFilme from './services/starWarsFilme.js';
 
 export default class Main extends Component {
 
   state = {
-    module: 'people',
     numeracao: 1,
-    starWars: []
+    pessoas: [],
+    personagem: '',
   };
 
   async getStarWarsData() {
-    let data = await StarWars.StarWarsApi(this.state.module, this.state.numeracao);
+    let resultadoPessoa = await StarWarsPessoa.StarWarsApiPessoa();
+    let resultadoFilme = await StarWarsFilme.StarWarsApiFilme();
     this.setState({
-      starWars: data
+      pessoas: resultadoPessoa.results,
+      filmes: resultadoFilme.results
     })
-    console.log(data)
-    console.log(this.state.starWars)
+    console.log(this.state.pessoas)
+    console.log(this.state.filmes)
   }
 
-  setModule = (modulo) => {
+  setPerson = (pessoa) => {
     this.setState({
-      module: modulo
+      personagem: pessoa
     })
     this.getStarWarsData();
+    console.log(this.state.personagem)
   }
 
   componentDidMount() {
@@ -34,7 +39,8 @@ export default class Main extends Component {
   render() {
     return (
       <section className="main-content">
-        <Form state={this.state} module={this.setModule} />
+        <Open />
+        <Form state={this.state} selecionarPessoa={this.setPerson} />
         <Preview state={this.state} />
       </section>
     );

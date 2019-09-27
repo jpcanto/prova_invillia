@@ -1,18 +1,16 @@
 .preview {
-    color: #fff;
-    font-family: sans-serif;
-
-    background: $pretoClaro;
-    border: 1px solid rgba(0,0,0,.6);
-    border-radius: 5px;
-    margin: 20px;
-    padding: 15px;
+    @include infoBox;
     &__caixa {
         &__info {
-            padding-bottom: 15px;
-            span {
-                color: $amareloPrincipal;
-                font-weight: bold;
+            &__details {
+                margin-bottom: 15px;
+                &:last-of-type {
+                    margin: 0;
+                }
+                span {
+                    color: $amareloPrincipal;
+                    font-weight: bold;
+                }
             }
         }
     }

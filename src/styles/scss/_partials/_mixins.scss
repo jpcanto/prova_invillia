@@ -6,7 +6,7 @@
     cursor: pointer;
     height: 50px;
     width: 100px;
-    transition: background-color 1s ease-in-out;
+    transition: color 1s ease-in-out;
 }
 
 @mixin select($largura, $tamanhoFonte) {
@@ -19,4 +19,15 @@
     border-bottom: 1px solid $cinzaOpaco;
     outline: 0;
     width: $largura;
+}
+
+@mixin infoBox {
+    color: #fff;
+    font-family: sans-serif;
+    
+    background: #272b30;
+    border: 1px solid rgba(0, 0, 0, 0.6);
+    border-radius: 5px;
+    margin: 20px;
+    padding: 15px;
 }
