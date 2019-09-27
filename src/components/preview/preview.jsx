@@ -39,9 +39,6 @@ export default class preview extends Component {
                                                 <div className="preview__caixa__info__details">
                                                     <span>Homeworld: </span>{`${pessoa.homeworld}`}
                                                 </div>
-                                                <div className="preview__caixa__info__details">
-                                                    <span>Star Ships: </span>{`${pessoa.starships}`}
-                                                </div>
                                             </> :
                                             null
                                     }

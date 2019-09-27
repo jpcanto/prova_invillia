@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export default class previewFilms extends Component {
+export default class previewShips extends Component {
     render() {
         return (
             <div className="preview">
@@ -9,7 +9,7 @@ export default class previewFilms extends Component {
                         {
                             this.props.state.personagem.length > 0 ?
                                 <div className="preview__caixa__info__details">
-                                    <span>Related Films: </span>
+                                    <span>Related Starships: </span>
                                 </div>
                                 : null
                         }
