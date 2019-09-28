@@ -119,6 +119,9 @@
   color: #ffe300;
   font-weight: bold;
 }
+.preview.full-preview {
+  width: -webkit-fill-available;
+}
 
 html,
 body,

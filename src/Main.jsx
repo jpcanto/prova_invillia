@@ -31,7 +31,7 @@ export default class Main extends Component {
   }
 
   setPerson = (pessoa) => {
-    if (this.state.pessoas > 0) {
+    if (this.state.pessoas.length > 0) {
       this.setState({
         personagem: pessoa[0],
         personagemFilmes: pessoa.slice(1, pessoa.length)

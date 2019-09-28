@@ -6,7 +6,7 @@ export default class preview extends Component {
     render() {
         return (
             <>
-                <div className="preview">
+                <div className="preview full-preview">
                     <div className="preview__caixa">
                         <div className="preview__caixa__info">
                             {this.props.state.pessoas.map((pessoa, index) =>
