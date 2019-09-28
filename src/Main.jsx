@@ -20,7 +20,7 @@ export default class Main extends Component {
   };
 
   async getStarWarsData() {
-    let resultadoPessoa = await StarWarsPessoa.StarWarsApiPessoa();
+    let resultadoPessoa = await StarWarsPessoa.StarWarsApiPessoa(this.state.numeracao);
     let resultadoFilme = await StarWarsFilme.StarWarsApiFilme();
     let resultadoNaves = await StarWarsNaves.StarWarsApiNaves();
     this.setState({
@@ -39,6 +39,27 @@ export default class Main extends Component {
     console.log(this.state.pessoas)
   }
 
+  setAheadPagination = () => {
+    if (this.state.numeracao > 5) {
+      alert('Número máximo de paginação atendido');
+    } else {
+       this.setState({
+         numeracao: this.state.numeracao +1
+       })
+    }
+    this.getStarWarsData();
+  }
+  setBehindPagination = () => {
+    if (this.state.numeracao > 0) {
+       this.setState({
+         numeracao: this.state.numeracao -1
+       })
+    } else {
+      alert('Não existe paginação abaixo de 0');
+    }
+    this.getStarWarsData()
+  }
+
   componentDidMount() {
     this.getStarWarsData();
   }
@@ -53,7 +74,9 @@ export default class Main extends Component {
             </div> :
             <>
               <Open />
-              <Form state={this.state} setPerson={this.setPerson} />
+              <Form state={this.state} setPerson={this.setPerson} 
+              setAheadPagination={this.setAheadPagination}
+              setBehindPagination={this.setBehindPagination}/>
               <div className="preview-box">
                 <Preview state={this.state} />
               </div>

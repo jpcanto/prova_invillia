@@ -1,8 +1,8 @@
-const url = 'https://swapi.co/api/people/';
+const url = 'https://swapi.co/api/people/?page=';
 
-const StarWarsApiPessoa = () => {
+const StarWarsApiPessoa = (paginacao) => {
 
-    return fetch(`${url}`, {
+    return fetch(`${url}${paginacao}`, {
         method: 'GET'
     })
         .then(res => res.json())

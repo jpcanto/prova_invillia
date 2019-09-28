@@ -7,17 +7,12 @@ export default class form extends Component {
         pessoa: '',
     }
 
-    handlePagination = () => {
-
-    }
-
     render() {
-        const contador = 1;
         return (
             <>
                 <div className="form">
                     <div className="form__select-box">
-                        <p>{`Página: ${contador}`}</p>
+                        <p>{`Página: ${this.props.state.numeracao}`}</p>
                         <select onChange={(e) => this.setState({ pessoa: e.target.value.split(',') })}>
                             <option disable='true' hidden>Select a character</option>
                             {this.props.state.pessoas.map((pessoa, index) =>
@@ -26,11 +21,11 @@ export default class form extends Component {
                         </select>
                     </div>
                     <div className="form__pagination">
-                        <button className="pagination" onClick={this.handlePagination}>
+                        <button className="pagination" onClick={this.props.setBehindPagination}>
                             <i class="fa fa-angle-double-left"></i>
                         </button>
                         <p>Mudar página de personagens</p>
-                        <button className="pagination" onClick={this.handlePagination}>
+                        <button className="pagination" onClick={this.props.setAheadPagination}>
                             <i class="fa fa-angle-double-right"></i>
                         </button>
                     </div>
