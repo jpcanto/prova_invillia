@@ -1,0 +1,17 @@
+.preview {
+    @include infoBox;
+    &__caixa {
+        &__info {
+            &__details {
+                margin-bottom: 15px;
+                &:last-of-type {
+                    margin: 0;
+                }
+                span {
+                    color: $amareloPrincipal;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
