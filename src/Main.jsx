@@ -6,6 +6,8 @@ import * as StarWarsPessoa from './services/starWarsPessoa.js';
 import * as StarWarsFilme from './services/starWarsFilme.js';
 import * as StarWarsNaves from './services/starWarsNaves.js';
 
+import './utils/fonts/fontawesome/css/all.min.css';
+
 export default class Main extends Component {
 
   state = {
