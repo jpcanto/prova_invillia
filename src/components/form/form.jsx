@@ -12,10 +12,12 @@ export default class form extends Component {
     }
 
     render() {
+        const contador = 1;
         return (
             <>
                 <div className="form">
                     <div className="form__select-box">
+                        <p>{`Página: ${contador}`}</p>
                         <select onChange={(e) => this.setState({ pessoa: e.target.value.split(',') })}>
                             <option disable='true' hidden>Select a character</option>
                             {this.props.state.pessoas.map((pessoa, index) =>
