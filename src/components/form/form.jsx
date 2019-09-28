@@ -22,11 +22,11 @@ export default class form extends Component {
                     </div>
                     <div className="form__pagination">
                         <button className="pagination" onClick={this.props.setBehindPagination}>
-                            <i class="fa fa-angle-double-left"></i>
+                            <i className="fa fa-angle-double-left"></i>
                         </button>
                         <p>Mudar página de personagens</p>
                         <button className="pagination" onClick={this.props.setAheadPagination}>
-                            <i class="fa fa-angle-double-right"></i>
+                            <i className="fa fa-angle-double-right"></i>
                         </button>
                     </div>
                     <button
