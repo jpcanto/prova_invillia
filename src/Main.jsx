@@ -52,7 +52,9 @@ export default class Main extends Component {
             <>
               <Open />
               <Form state={this.state} setPerson={this.setPerson} />
-              <Preview state={this.state} />
+              <div className="preview-box">
+                <Preview state={this.state} />
+              </div>
             </>
         }
       </section>
