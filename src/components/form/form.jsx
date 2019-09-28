@@ -27,6 +27,7 @@ export default class form extends Component {
                         <button className="pagination" onClick={this.handlePagination}>
                             <i class="fa fa-angle-double-left"></i>
                         </button>
+                        <p>Mudar página de personagens</p>
                         <button className="pagination" onClick={this.handlePagination}>
                             <i class="fa fa-angle-double-right"></i>
                         </button>

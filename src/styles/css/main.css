@@ -59,9 +59,11 @@
   width: -webkit-fill-available;
 }
 .form__pagination {
+  align-items: center;
   display: flex;
-  justify-content: space-between;
-  width: 100px;
+  justify-content: space-evenly;
+  margin-bottom: 40px;
+  width: -webkit-fill-available;
 }
 .form__pagination .pagination {
   background: #4d4d4d57;
@@ -69,7 +71,6 @@
   border-radius: 50%;
   cursor: pointer;
   height: 40px;
-  margin-bottom: 30px;
   width: 40px;
 }
 .form__pagination .pagination:focus {
@@ -78,6 +79,10 @@
 .form__pagination .pagination i {
   color: #fff;
   font-size: 1.5em;
+}
+.form__pagination p {
+  text-align: center;
+  margin: 0;
 }
 .form__pesquisar {
   color: #039BE5;
