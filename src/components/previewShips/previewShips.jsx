@@ -1,7 +1,14 @@
 import React, { Component } from 'react';
 
 export default class previewShips extends Component {
+
+    state = {
+        teste: []
+    }
+
     render() {
+        console.log(this.props.state.pessoas)
+        console.log('oi', this.state.teste)
         return (
             <div className="preview">
                 <div className="preview__caixa">
@@ -13,23 +20,15 @@ export default class previewShips extends Component {
                                 </div>
                                 : null
                         }
-                        {/* <div className="preview__caixa__info__details--films">
-                            {this.props.state.filmes.map((filme) =>
-                                <>
-                                    {this.props.state.personagemFilmes.map((personagem) =>
-                                        <>
-                                            {
-                                                filme.url === personagem ?
-                                                    <>
-                                                        <div><span>{filme.url.slice(27, 28)} - </span>
-                                                            {`${filme.title}`}</div>
-                                                    </> : null
-                                            }
-                                        </>
-                                    )}
-                                </>
+                        <div className="preview__caixa__info__details--films">
+                            {this.props.state.pessoas.map((pessoa, index) =>
+                                <div key={index}>
+                                    {pessoa.name === this.props.state.personagem ? () => {
+                                        console.log('hello world')
+                                    } : null}
+                                </div>
                             )}
-                        </div> */}
+                        </div>
                     </div>
                 </div>
             </div>

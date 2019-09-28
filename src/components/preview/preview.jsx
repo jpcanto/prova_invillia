@@ -9,8 +9,8 @@ export default class preview extends Component {
                 <div className="preview">
                     <div className="preview__caixa">
                         <div className="preview__caixa__info">
-                            {this.props.state.pessoas.map((pessoa) =>
-                                <>
+                            {this.props.state.pessoas.map((pessoa, index) =>
+                                <div key={index}>
                                     {
                                         pessoa.name === this.props.state.personagem ?
                                             <>
@@ -44,7 +44,7 @@ export default class preview extends Component {
                                             </> :
                                             null
                                     }
-                                </>
+                                </div>
                             )}
                         </div>
                     </div>

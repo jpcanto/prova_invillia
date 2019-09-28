@@ -14,10 +14,10 @@ export default class previewFilms extends Component {
                                 : null
                         }
                         <div className="preview__caixa__info__details--films">
-                            {this.props.state.filmes.map((filme) =>
-                                <>
-                                    {this.props.state.personagemFilmes.map((personagem) =>
-                                        <>
+                            {this.props.state.filmes.map((filme, index) =>
+                                <div key={index}>
+                                    {this.props.state.personagemFilmes.map((personagem, index) =>
+                                        <div key={index}>
                                             {
                                                 filme.url === personagem ?
                                                     <>
@@ -25,9 +25,9 @@ export default class previewFilms extends Component {
                                                             {`${filme.title}`}</div>
                                                     </> : null
                                             }
-                                        </>
+                                        </div>
                                     )}
-                                </>
+                                </div>
                             )}
                         </div>
                     </div>

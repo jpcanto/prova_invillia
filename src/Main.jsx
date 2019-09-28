@@ -51,7 +51,7 @@ export default class Main extends Component {
             </div> :
             <>
               <Open />
-              <Form state={this.state} selecionarPessoa={this.setPerson} />
+              <Form state={this.state} setPerson={this.setPerson} />
               <Preview state={this.state} />
             </>
         }
