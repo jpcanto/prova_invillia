@@ -14,4 +14,7 @@
             }
         }
     }
+    &.full-preview {
+        width: -webkit-fill-available;
+    }
 }

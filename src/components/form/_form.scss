@@ -4,13 +4,38 @@
     display: flex;
     flex-direction: column;
     &__select-box {
+        align-items: center;
         display: flex;
+        flex-direction: column;
         height: 55px;
         justify-content: center;
         margin: 50px 0;
-        width: 200px;
+        width: -webkit-fill-available;
         select {
-            @include select(-webkit-fill-available, 1.1em);
+            @include select(200px, 1.1em);
+            padding: 15px 5px;
+        }
+    }
+    &__pagination {
+        align-items: center;
+        display: flex;
+        justify-content: space-evenly;
+        margin-bottom: 40px;
+        width: -webkit-fill-available;
+        .pagination {
+            @include btn-circle;
+            &:focus {
+                outline: none;
+            }
+            i {
+                color: #fff;
+                font-size: 1.5em;
+            }
+        }
+        p {
+            text-align: center;
+
+            margin: 0;
         }
     }
     &__pesquisar {

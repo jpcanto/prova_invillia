@@ -39,3 +39,9 @@ body,
         animation: loader 2s linear infinite;
     }
 }
+
+.preview-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}

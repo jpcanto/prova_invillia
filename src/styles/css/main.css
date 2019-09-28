@@ -42,11 +42,13 @@
   flex-direction: column;
 }
 .form__select-box {
+  align-items: center;
   display: flex;
+  flex-direction: column;
   height: 55px;
   justify-content: center;
   margin: 50px 0;
-  width: 200px;
+  width: -webkit-fill-available;
 }
 .form__select-box select {
   color: #039BE5;
@@ -56,7 +58,34 @@
   border: 2px solid;
   outline: 0;
   padding-left: 5px;
+  width: 200px;
+  padding: 15px 5px;
+}
+.form__pagination {
+  align-items: center;
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 40px;
   width: -webkit-fill-available;
+}
+.form__pagination .pagination {
+  background: #4d4d4d57;
+  border: 2px solid #039BE5;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 40px;
+  width: 40px;
+}
+.form__pagination .pagination:focus {
+  outline: none;
+}
+.form__pagination .pagination i {
+  color: #fff;
+  font-size: 1.5em;
+}
+.form__pagination p {
+  text-align: center;
+  margin: 0;
 }
 .form__pesquisar {
   color: #039BE5;
@@ -90,6 +119,9 @@
   color: #ffe300;
   font-weight: bold;
 }
+.preview.full-preview {
+  width: -webkit-fill-available;
+}
 
 html,
 body,
@@ -122,6 +154,12 @@ body,
   width: 120px;
   height: 120px;
   animation: loader 2s linear infinite;
+}
+
+.preview-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 /*# sourceMappingURL=main.css.map */

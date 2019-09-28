@@ -6,6 +6,8 @@ import * as StarWarsPessoa from './services/starWarsPessoa.js';
 import * as StarWarsFilme from './services/starWarsFilme.js';
 import * as StarWarsNaves from './services/starWarsNaves.js';
 
+import './utils/fonts/fontawesome/css/all.min.css';
+
 export default class Main extends Component {
 
   state = {
@@ -18,7 +20,7 @@ export default class Main extends Component {
   };
 
   async getStarWarsData() {
-    let resultadoPessoa = await StarWarsPessoa.StarWarsApiPessoa();
+    let resultadoPessoa = await StarWarsPessoa.StarWarsApiPessoa(this.state.numeracao);
     let resultadoFilme = await StarWarsFilme.StarWarsApiFilme();
     let resultadoNaves = await StarWarsNaves.StarWarsApiNaves();
     this.setState({
@@ -29,12 +31,36 @@ export default class Main extends Component {
   }
 
   setPerson = (pessoa) => {
-    this.setState({
-      personagem: pessoa[0],
-      personagemFilmes: pessoa.slice(1, pessoa.length)
-    })
+    if (this.state.pessoas.length > 0) {
+      this.setState({
+        personagem: pessoa[0],
+        personagemFilmes: pessoa.slice(1, pessoa.length)
+      })
+    } else {
+      alert('é necessário selecionar um personagem para pesquisar!')
+    }
     this.getStarWarsData();
-    console.log(this.state.pessoas)
+  }
+
+  setAheadPagination = () => {
+    this.getStarWarsData();
+    if (this.state.numeracao > 10) {
+      alert('Número máximo de paginação atendido');
+    } else {
+      this.setState({
+        numeracao: this.state.numeracao +1
+      })
+    }
+  }
+  setBehindPagination = () => {
+    this.getStarWarsData();
+    if (this.state.numeracao > 1) {
+       this.setState({
+         numeracao: this.state.numeracao -1
+       })
+    } else {
+      alert('Não existe paginação abaixo de 0');
+    }
   }
 
   componentDidMount() {
@@ -51,8 +77,12 @@ export default class Main extends Component {
             </div> :
             <>
               <Open />
-              <Form state={this.state} setPerson={this.setPerson} />
-              <Preview state={this.state} />
+              <Form state={this.state} setPerson={this.setPerson} 
+              setAheadPagination={this.setAheadPagination}
+              setBehindPagination={this.setBehindPagination}/>
+              <div className="preview-box">
+                <Preview state={this.state} />
+              </div>
             </>
         }
       </section>

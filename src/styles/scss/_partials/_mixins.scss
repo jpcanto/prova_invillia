@@ -9,6 +9,15 @@
     transition: color 1s ease-in-out;
 }
 
+@mixin btn-circle {
+    background: $cinzaOpaco;
+    border: 2px solid $azulPrincipal;
+    border-radius: 50%;
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+}
+
 @mixin select($largura, $tamanhoFonte) {
     color: $azulPrincipal;
     font-family: sans-serif;
