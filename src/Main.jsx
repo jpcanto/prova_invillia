@@ -31,33 +31,36 @@ export default class Main extends Component {
   }
 
   setPerson = (pessoa) => {
-    this.setState({
-      personagem: pessoa[0],
-      personagemFilmes: pessoa.slice(1, pessoa.length)
-    })
-    this.getStarWarsData();
-    console.log(this.state.pessoas)
-  }
-
-  setAheadPagination = () => {
-    if (this.state.numeracao > 5) {
-      alert('Número máximo de paginação atendido');
+    if (this.state.pessoas > 0) {
+      this.setState({
+        personagem: pessoa[0],
+        personagemFilmes: pessoa.slice(1, pessoa.length)
+      })
     } else {
-       this.setState({
-         numeracao: this.state.numeracao +1
-       })
+      alert('é necessário selecionar um personagem para pesquisar!')
     }
     this.getStarWarsData();
   }
+
+  setAheadPagination = () => {
+    this.getStarWarsData();
+    if (this.state.numeracao > 10) {
+      alert('Número máximo de paginação atendido');
+    } else {
+      this.setState({
+        numeracao: this.state.numeracao +1
+      })
+    }
+  }
   setBehindPagination = () => {
-    if (this.state.numeracao > 0) {
+    this.getStarWarsData();
+    if (this.state.numeracao > 1) {
        this.setState({
          numeracao: this.state.numeracao -1
        })
     } else {
       alert('Não existe paginação abaixo de 0');
     }
-    this.getStarWarsData()
   }
 
   componentDidMount() {
