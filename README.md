@@ -1,6 +1,13 @@
 # Dev: João Pedro Lopes Canto
 
-<hr/>
+## O app deve:
+- Ter um layout responsivo e limpo, com uma boa UI.
+- Possuir testes de renderização, e que cubram ao menos 50% dos comportamentos.
+- Listar ao menos 10 listas de personagens.
+- Poder modificar a paginação.
+- Mostrar características dos personagens.
+- Mostrar filmes aos quais o personagem participou.
+- Mostrar informações sobre as naves que o personagem utilizou.
 
 ## Scripts
 
